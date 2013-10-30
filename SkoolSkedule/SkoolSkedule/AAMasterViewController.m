@@ -22,16 +22,24 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-//    self.schedule = [[GenericSchedule alloc] init];
-    self.schedule = [[Basic3Schedule alloc] init];
-    self.tableView.delegate   = self.schedule;
-    self.tableView.dataSource = self.schedule;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)setScheduleIndex:(NSUInteger)scheduleIndex
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    _scheduleIndex = scheduleIndex;
+    switch (scheduleIndex) {
+        case 0:
+            self.schedule = [[GenericSchedule alloc] init];
+            break;
+        case 1:
+            self.schedule = [[Basic3Schedule alloc] init];
+            break;
+            
+        default:
+            break;
+    }
+    self.tableView.delegate   = self.schedule;
+    self.tableView.dataSource = self.schedule;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

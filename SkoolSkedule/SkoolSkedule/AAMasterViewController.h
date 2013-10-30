@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AAMasterViewController : UITableViewController
-
+@property (nonatomic, assign) NSUInteger scheduleIndex;
 @end

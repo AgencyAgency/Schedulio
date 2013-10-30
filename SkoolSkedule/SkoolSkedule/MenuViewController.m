@@ -7,18 +7,26 @@
 //
 
 #import "MenuViewController.h"
+#import "AAMasterViewController.h"
+
 
 @interface MenuViewController ()
-
+- (IBAction)schedulePressed:(UIButton *)sender;
 @end
 
 @implementation MenuViewController
 
-- (IBAction)basic1Pressed:(UIButton *)sender {
-    []
+- (IBAction)schedulePressed:(UIButton *)sender {
+    NSLog(@"segue: %i", [(UIButton *)sender tag]);
+    [self performSegueWithIdentifier:@"showSchedule" sender:sender];
 }
-- (IBAction)basic3Pressed:(UIButton *)sender {
-    
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showSchedule"]) {
+        [segue.destinationViewController setScheduleIndex:[(UIButton *)sender tag]];
+    }
 }
+
 
 @end
