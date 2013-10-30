@@ -29,8 +29,6 @@
 {
     if ([segue.identifier isEqualToString:@"showSchedule"]) {
         NSUInteger index = [self.schedulePicker selectedRowInComponent:0];
-        NSLog(@"index: %i", index);
-        NSLog(@"basic1: %i", kBasic1);
         [[segue destinationViewController] setScheduleType:index];
     }
 }
