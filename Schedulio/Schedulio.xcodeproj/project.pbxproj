@@ -23,6 +23,7 @@
 		CF1E08DE1820A7CB0009047A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF1E08DC1820A7CB0009047A /* InfoPlist.strings */; };
 		CF1E08E01820A7CB0009047A /* SchedulioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1E08DF1820A7CB0009047A /* SchedulioTests.m */; };
 		CF1E08EB182158DE0009047A /* PDCScheduleMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1E08EA182158DE0009047A /* PDCScheduleMaster.m */; };
+		CF1E08EE18215FB10009047A /* PDCMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1E08ED18215FB10009047A /* PDCMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		CF1E08DF1820A7CB0009047A /* SchedulioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchedulioTests.m; sourceTree = "<group>"; };
 		CF1E08E9182158DE0009047A /* PDCScheduleMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCScheduleMaster.h; sourceTree = "<group>"; };
 		CF1E08EA182158DE0009047A /* PDCScheduleMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCScheduleMaster.m; sourceTree = "<group>"; };
+		CF1E08EC18215FB10009047A /* PDCMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCMenuViewController.h; sourceTree = "<group>"; };
+		CF1E08ED18215FB10009047A /* PDCMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				CF1E08C01820A7CB0009047A /* PDCAppDelegate.h */,
 				CF1E08C11820A7CB0009047A /* PDCAppDelegate.m */,
 				CF1E08C31820A7CB0009047A /* Main.storyboard */,
+				CF1E08EC18215FB10009047A /* PDCMenuViewController.h */,
+				CF1E08ED18215FB10009047A /* PDCMenuViewController.m */,
 				CF1E08C61820A7CB0009047A /* PDCMasterViewController.h */,
 				CF1E08C71820A7CB0009047A /* PDCMasterViewController.m */,
 				CF1E08C91820A7CB0009047A /* PDCDetailViewController.h */,
@@ -265,6 +270,7 @@
 				CF1E08CB1820A7CB0009047A /* PDCDetailViewController.m in Sources */,
 				CF1E08BE1820A7CB0009047A /* main.m in Sources */,
 				CF1E08C81820A7CB0009047A /* PDCMasterViewController.m in Sources */,
+				CF1E08EE18215FB10009047A /* PDCMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

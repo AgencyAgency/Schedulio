@@ -10,17 +10,21 @@
 
 @interface PDCScheduleMaster ()
 @property (nonatomic, strong) NSMutableArray *courses;
+@property (nonatomic, assign) ScheduleType scheduleType;
 @end
 
 @implementation PDCScheduleMaster
 
-typedef enum ScheduleType : NSUInteger {
-    kBasic1,
-    kBasic7,
-    kBasic3
-} ScheduleType;
+- (id)initWithScheduleType:(ScheduleType)scheduleType
+{
+    self = [super init];
+    if (self) {
+        _scheduleType = scheduleType;
+    }
+    return self;
+}
 
-- (NSArray *)coursesForScheduleType:(ScheduleType)scheduleType
++ (NSArray *)coursesForScheduleType:(ScheduleType)scheduleType
 {
     switch (scheduleType) {
         case kBasic1:
@@ -63,10 +67,12 @@ typedef enum ScheduleType : NSUInteger {
     }
 }
 
+
+
 - (NSMutableArray *)courses
 {
     if (!_courses) {
-        NSArray *c = [self coursesForScheduleType:kBasic7];
+        NSArray *c = [self.class coursesForScheduleType:self.scheduleType];
         _courses = [NSMutableArray arrayWithArray:c];
     }
     return _courses;

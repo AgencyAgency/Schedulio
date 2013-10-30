@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PDCScheduleMaster.h"
 
 @interface PDCMasterViewController : UITableViewController
-
+@property (nonatomic, assign) ScheduleType scheduleType;
 @end

@@ -8,23 +8,21 @@
 
 #import "PDCMasterViewController.h"
 #import "PDCDetailViewController.h"
-#import "PDCScheduleMaster.h"
 
 @interface PDCMasterViewController ()
-@property (nonatomic, strong) IBOutlet PDCScheduleMaster *scheduleMaster;
+@property (nonatomic, strong) PDCScheduleMaster *scheduleMaster;
 @end
 
 @implementation PDCMasterViewController
 
-- (void)awakeFromNib
+- (void)setScheduleType:(ScheduleType)scheduleType
 {
-    [super awakeFromNib];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    if (_scheduleType == scheduleType && self.scheduleMaster) return;
+    
+    _scheduleType = scheduleType;
+    self.scheduleMaster = [[PDCScheduleMaster alloc] initWithScheduleType:scheduleType];
+    [self.tableView setDataSource:self.scheduleMaster];
+    [self.tableView setDelegate:self.scheduleMaster];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
