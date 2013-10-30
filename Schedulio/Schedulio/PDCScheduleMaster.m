@@ -14,19 +14,60 @@
 
 @implementation PDCScheduleMaster
 
+typedef enum ScheduleType : NSUInteger {
+    kBasic1,
+    kBasic7,
+    kBasic3
+} ScheduleType;
+
+- (NSArray *)coursesForScheduleType:(ScheduleType)scheduleType
+{
+    switch (scheduleType) {
+        case kBasic1:
+            return @[@"P1",
+                     @"P2",
+                     @"P3",
+                     @"P4",
+                     @"P5",
+                     @"LUNCH",
+                     @"P6",
+                     @"P7",
+                     @"P8",
+                     ];
+        case kBasic3:
+            return @[@"P3",
+                     @"P4",
+                     @"P7",
+                     @"P8",
+                     @"P5",
+                     @"LUNCH",
+                     @"P6",
+                     @"P1",
+                     @"P2",
+                     ];
+            
+        case kBasic7:
+            return @[@"P7",
+                     @"P8",
+                     @"P1",
+                     @"P2",
+                     @"P5",
+                     @"LUNCH",
+                     @"P6",
+                     @"P3",
+                     @"P4",
+                     ];
+            
+        default:
+            break;
+    }
+}
+
 - (NSMutableArray *)courses
 {
     if (!_courses) {
-        _courses = [NSMutableArray arrayWithArray:@[@"P1",
-                                                    @"P2",
-                                                    @"P3",
-                                                    @"P4",
-                                                    @"P5",
-                                                    @"LUNCH",
-                                                    @"P6",
-                                                    @"P7",
-                                                    @"P8",
-                                                    ]];
+        NSArray *c = [self coursesForScheduleType:kBasic7];
+        _courses = [NSMutableArray arrayWithArray:c];
     }
     return _courses;
 }
