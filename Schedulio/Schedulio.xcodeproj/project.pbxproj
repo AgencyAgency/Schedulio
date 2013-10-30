@@ -22,6 +22,7 @@
 		CF1E08D61820A7CB0009047A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1E08B51820A7CB0009047A /* UIKit.framework */; };
 		CF1E08DE1820A7CB0009047A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF1E08DC1820A7CB0009047A /* InfoPlist.strings */; };
 		CF1E08E01820A7CB0009047A /* SchedulioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1E08DF1820A7CB0009047A /* SchedulioTests.m */; };
+		CF1E08EB182158DE0009047A /* PDCScheduleMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1E08EA182158DE0009047A /* PDCScheduleMaster.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		CF1E08DB1820A7CB0009047A /* SchedulioTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SchedulioTests-Info.plist"; sourceTree = "<group>"; };
 		CF1E08DD1820A7CB0009047A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF1E08DF1820A7CB0009047A /* SchedulioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchedulioTests.m; sourceTree = "<group>"; };
+		CF1E08E9182158DE0009047A /* PDCScheduleMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCScheduleMaster.h; sourceTree = "<group>"; };
+		CF1E08EA182158DE0009047A /* PDCScheduleMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCScheduleMaster.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				CF1E08C71820A7CB0009047A /* PDCMasterViewController.m */,
 				CF1E08C91820A7CB0009047A /* PDCDetailViewController.h */,
 				CF1E08CA1820A7CB0009047A /* PDCDetailViewController.m */,
+				CF1E08E9182158DE0009047A /* PDCScheduleMaster.h */,
+				CF1E08EA182158DE0009047A /* PDCScheduleMaster.m */,
 				CF1E08CC1820A7CB0009047A /* Images.xcassets */,
 				CF1E08B81820A7CB0009047A /* Supporting Files */,
 			);
@@ -255,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1E08EB182158DE0009047A /* PDCScheduleMaster.m in Sources */,
 				CF1E08C21820A7CB0009047A /* PDCAppDelegate.m in Sources */,
 				CF1E08CB1820A7CB0009047A /* PDCDetailViewController.m in Sources */,
 				CF1E08BE1820A7CB0009047A /* main.m in Sources */,
@@ -467,6 +473,7 @@
 				CF1E08E51820A7CB0009047A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF1E08E61820A7CB0009047A /* Build configuration list for PBXNativeTarget "SchedulioTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +482,7 @@
 				CF1E08E81820A7CB0009047A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
