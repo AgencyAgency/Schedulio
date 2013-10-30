@@ -8,7 +8,7 @@
 
 #import "AAMasterViewController.h"
 #import "AADetailViewController.h"
-#import "GenericSchedule.h"
+#import "Basic1Schedule.h"
 #import "Basic3Schedule.h"
 
 @interface AAMasterViewController ()
@@ -29,7 +29,7 @@
     _scheduleIndex = scheduleIndex;
     switch (scheduleIndex) {
         case 0:
-            self.schedule = [[GenericSchedule alloc] init];
+            self.schedule = [[Basic1Schedule alloc] init];
             break;
         case 1:
             self.schedule = [[Basic3Schedule alloc] init];

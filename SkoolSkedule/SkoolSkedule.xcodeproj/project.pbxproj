@@ -25,6 +25,7 @@
 		CF1E09351821AF590009047A /* GenericSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1E09341821AF590009047A /* GenericSchedule.m */; };
 		CF1E097C1821B6B10009047A /* Basic3Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1E097B1821B6B10009047A /* Basic3Schedule.m */; };
 		CF1E097F1821B74B0009047A /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1E097E1821B74B0009047A /* MenuViewController.m */; };
+		CFB6480B1821C468000D4303 /* Basic1Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB6480A1821C468000D4303 /* Basic1Schedule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		CF1E097B1821B6B10009047A /* Basic3Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Basic3Schedule.m; sourceTree = "<group>"; };
 		CF1E097D1821B74B0009047A /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		CF1E097E1821B74B0009047A /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		CFB648091821C468000D4303 /* Basic1Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Basic1Schedule.h; sourceTree = "<group>"; };
+		CFB6480A1821C468000D4303 /* Basic1Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Basic1Schedule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				CF1E09021821AEDB0009047A /* Supporting Files */,
 				CF1E09331821AF590009047A /* GenericSchedule.h */,
 				CF1E09341821AF590009047A /* GenericSchedule.m */,
+				CFB648091821C468000D4303 /* Basic1Schedule.h */,
+				CFB6480A1821C468000D4303 /* Basic1Schedule.m */,
 				CF1E097A1821B6B10009047A /* Basic3Schedule.h */,
 				CF1E097B1821B6B10009047A /* Basic3Schedule.m */,
 			);
@@ -273,6 +278,7 @@
 				CF1E090C1821AEDB0009047A /* AAAppDelegate.m in Sources */,
 				CF1E09351821AF590009047A /* GenericSchedule.m in Sources */,
 				CF1E09081821AEDB0009047A /* main.m in Sources */,
+				CFB6480B1821C468000D4303 /* Basic1Schedule.m in Sources */,
 				CF1E09121821AEDB0009047A /* AAMasterViewController.m in Sources */,
 				CF1E097F1821B74B0009047A /* MenuViewController.m in Sources */,
 				CF1E09151821AEDB0009047A /* AADetailViewController.m in Sources */,
@@ -485,6 +491,7 @@
 				CF1E092F1821AEDB0009047A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF1E09301821AEDB0009047A /* Build configuration list for PBXNativeTarget "SkoolSkeduleTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +500,7 @@
 				CF1E09321821AEDB0009047A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
