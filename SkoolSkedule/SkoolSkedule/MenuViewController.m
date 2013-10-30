@@ -17,7 +17,6 @@
 @implementation MenuViewController
 
 - (IBAction)schedulePressed:(UIButton *)sender {
-    NSLog(@"segue: %i", [(UIButton *)sender tag]);
     [self performSegueWithIdentifier:@"showSchedule" sender:sender];
 }
 
