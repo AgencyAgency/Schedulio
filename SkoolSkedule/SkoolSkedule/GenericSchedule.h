@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface GenericSchedule : NSObject <UITableViewDataSource, UITableViewDelegate>
-
+- (NSString *)titleForRow:(NSUInteger)row;
 @end

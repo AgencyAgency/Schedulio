@@ -27,6 +27,12 @@
     return _courses;
 }
 
+- (NSString *)titleForRow:(NSUInteger)row
+{
+    return [[self.courses objectAtIndex:row] description];
+}
+
+
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -43,8 +49,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    NSDate *object = self.courses[indexPath.row];
-    cell.textLabel.text = [object description];
+    cell.textLabel.text = [self titleForRow:indexPath.row];
     return cell;
 }
 
