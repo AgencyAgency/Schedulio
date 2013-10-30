@@ -136,4 +136,20 @@
  }
  */
 
+
+#pragma mark -
+#pragma Table View Delegates
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat hueRange = 0.1;
+    CGFloat hueDelta = hueRange * (float)indexPath.row / (float)self.courses.count;
+    CGFloat hueStart = 0.0;
+    UIColor *backColor = [UIColor colorWithHue:hueStart + hueDelta
+                                    saturation:1.0
+                                    brightness:1.0
+                                         alpha:1.0];
+    cell.backgroundColor = backColor;
+}
+
 @end
