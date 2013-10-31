@@ -18,15 +18,15 @@
 {
     if (!_courses) {
         _courses = @[
-                     @"Period 3",
-                     @"Period 4",
-                     @"Period 7",
-                     @"Period 8",
-                     @"Period 5",
-                     @"Lunch",
-                     @"Period 6",
-                     @"Period 1",
-                     @"Period 2"
+                     PERIOD_3,
+                     PERIOD_4,
+                     PERIOD_7,
+                     PERIOD_8,
+                     PERIOD_5,
+                     PERIOD_LUNCH,
+                     PERIOD_6,
+                     PERIOD_1,
+                     PERIOD_2
                      ];
     }
     return _courses;

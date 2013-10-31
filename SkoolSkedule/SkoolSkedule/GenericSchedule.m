@@ -10,9 +10,27 @@
 
 @interface GenericSchedule ()
 @property (nonatomic, strong) NSArray *courses;
+@property (nonatomic, strong) NSDictionary *courseTitles;
 @end
 
 @implementation GenericSchedule
+
+- (NSDictionary *)courseTitles
+{
+    if (!_courseTitles) {
+        _courseTitles = @{
+                          PERIOD_1: @"1: Biology",
+                          PERIOD_2: @"2: Astro-Physics",
+                          PERIOD_3: @"3: Underwater Basket-Weaving",
+                          PERIOD_4: @"4: Addition 101",
+                          PERIOD_5: @"5: iPad App Design & Development",
+                          PERIOD_6: @"6: Cheese-making",
+                          PERIOD_7: @"7: Chemistry",
+                          PERIOD_8: @"8: LASERs!",
+                          };
+    }
+    return _courseTitles;
+}
 
 - (NSArray *)courses
 {
@@ -24,7 +42,8 @@
 
 - (NSString *)titleForRow:(NSUInteger)row
 {
-    return [[self.courses objectAtIndex:row] description];
+    NSString *key = [self.courses objectAtIndex:row];
+    return self.courseTitles[key];
 }
 
 
