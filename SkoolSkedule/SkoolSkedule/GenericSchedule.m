@@ -14,11 +14,6 @@
 
 @implementation GenericSchedule
 
-+ (NSUInteger)plus2:(NSUInteger)thing
-{
-    return thing + 2;
-}
-
 - (NSArray *)courses
 {
     if (!_courses) {
