@@ -40,14 +40,29 @@
     return _courses;
 }
 
+- (CGFloat)lengthOfPeriod:(NSString *)period
+{
+    CGFloat length = 44.0;
+    if ([period isEqualToString:PERIOD_LUNCH]) {
+        length = 43.0;
+    }
+    return length;
+}
+
 - (NSString *)titleForRow:(NSUInteger)row
 {
     NSString *key = [self.courses objectAtIndex:row];
-    return self.courseTitles[key];
+    NSString *title;
+    if ([key isEqualToString:PERIOD_LUNCH]) {
+        title = @"Lunch";
+    } else {
+        title = self.courseTitles[key];
+    }
+    return title;
 }
 
 
-#pragma mark - Table View
+#pragma mark - Table View Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -82,6 +97,15 @@
  return YES;
  }
  */
+
+#pragma mark - Table View Delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *period = self.courses[indexPath.row];
+    CGFloat height = [self lengthOfPeriod:period];
+    return height * 2.0;
+}
 
 
 @end
